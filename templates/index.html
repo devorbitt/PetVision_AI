@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cat vs Dog</title>
+  <style>
+    body{font-family:sans-serif;text-align:center;margin-top:60px;background:#f4f4f9}
+    .box{background:#fff;padding:30px;border-radius:10px;width:380px;margin:auto;box-shadow:0 4px 8px rgba(0,0,0,.1)}
+    input[type=submit]{background:#4CAF50;color:#fff;padding:10px 20px;border:0;border-radius:5px;cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h3>Give me a Picture Let me guess it is a Cat or Dog 🐱🐶</h3>
+    <form method="POST" enctype="multipart/form-data">
+      <input type="file" name="file" accept="image/*" required><br><br>
+      <input type="submit" value="Predict">
+    </form>
+    {% if result %}<h3>{{ result }}</h3>{% endif %}
+  </div>
+</body>
+</html>
